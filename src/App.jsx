@@ -1,12 +1,11 @@
-import "./App.css";
 import PostList from "./components/PostList";
-import AddFormPost from "./components/addFormPost";
+import AddFormPost from "./components/AddFormPost";
 
 function App() {
   return (
     <div>
-      <PostList />
       <AddFormPost />
+      <PostList />
     </div>
   );
 }
