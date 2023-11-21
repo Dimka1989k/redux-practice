@@ -26,16 +26,37 @@ main {
   margin: auto;
 }
 
-input,
-textarea,
+
+
 button {
   font: inherit;
   margin-bottom: 1em;
   border-radius: 10px;
+  color: #256377;
 }
 
 
 
+
+
+
+input {  
+  font: inherit;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  padding-left: 15px;
+
+ 
+}
+
+textarea {
+  font: inherit;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    padding-left: 15px;
+    height: 200px;
+
+}
 
 select {
   font: inherit;
@@ -44,6 +65,48 @@ select {
   text-indent: 10px;
   
 
+}
+
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: whitesmoke;
+  color:#256377;
+  position: sticky;
+  top: 0;  
+  border-radius: 10px;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+
+nav ul {
+  list-style-type: none;
+  
+}
+
+nav ul li {
+  display: inline-block;
+  justify-content: center; 
+    margin-right: 1rem;
+
+}
+
+nav a,
+nav a:visited {
+  color:#256377;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  text-decoration: underline;
 }
 
 
@@ -65,6 +128,7 @@ article {
   border: 1px solid whitesmoke;
   border-radius: 10px;
   padding: 1em;
+  margin-top: 2.5em;
 
  
 }
@@ -104,6 +168,18 @@ label {
   
 }
 
+
+.post a,
+.post a:visited {
+  margin-right: 0.5rem;
+  color: black;
+}
+
+.post a:hover,
+.post a:focus {
+  color: hsla(0, 0%, 0%, 0.75);
+}
+
 .reaction {
   margin: 0 1em 0 0;
   background: transparent;
@@ -112,3 +188,18 @@ label {
   font-size: 1rem;
 }
 
+span {
+  margin-left: 10px;
+}
+
+
+.excerpt {
+  font-style: italic;
+}
+
+
+
+.delete-button {
+  background-color:red;
+  color: #256377;
+}
