@@ -5,6 +5,11 @@ import "./index.css";
 
 import { store } from "./redux/store.js";
 import { Provider } from "react-redux";
+import { fetchUsers } from "./redux/slice/usersSlice.js";
+import { fetchPosts } from "./redux/slice/postsSlice.js";
+
+store.dispatch(fetchUsers());
+store.dispatch(fetchPosts());
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
