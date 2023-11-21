@@ -4,6 +4,7 @@ import {
   getPostsStatus,
   getPostsError,
 } from "../redux/selectors/selectors";
+import { FidgetSpinner } from "react-loader-spinner";
 
 import PostExcerpt from "./PostExcerpt";
 
@@ -14,7 +15,20 @@ const PostList = () => {
 
   let content;
   if (postsStatus === "loading") {
-    content = <p>Loading...</p>;
+    content = (
+      <div className="loader">
+        <FidgetSpinner
+          visible={true}
+          height="80"
+          width="80"
+          ariaLabel="dna-loading"
+          wrapperStyle={{}}
+          wrapperClass="dna-wrapper"
+          ballColors={["#256377", "#256377", "#256377"]}
+          backgroundColor="#f2eeee"
+        />
+      </div>
+    );
   } else if (postsStatus === "succeeded") {
     const orderedPosts = posts
       .slice()
