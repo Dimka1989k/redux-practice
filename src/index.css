@@ -33,7 +33,12 @@ button {
   margin-bottom: 1em;
   border-radius: 10px;
   color: #256377;
+  border: none;
+  
 }
+
+
+
 
 
 
@@ -45,6 +50,7 @@ input {
   margin-bottom: 1em;
   border-radius: 10px;
   padding-left: 15px;
+  border: none;
 
  
 }
@@ -93,20 +99,26 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  justify-content: center; 
-    margin-right: 1rem;
-
+  justify-content: center;  
+  padding: 4px 8px;
+    
 }
 
 nav a,
 nav a:visited {
   color:#256377;
+  padding: 4px 8px;
   text-decoration: none;
+  
 }
 
 nav a:hover,
 nav a:focus {
-  text-decoration: underline;
+  background-color: #256377;
+  border-radius: 10px;
+  padding: 4px 8px;  
+  color: whitesmoke;
+  
 }
 
 
@@ -166,18 +178,27 @@ label {
 .post {
   font-size: 1rem;
   
-}
 
+  
+}
 
 .post a,
 .post a:visited {
-  margin-right: 0.5rem;
-  color: black;
-}
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 1px solid whitesmoke;
+    padding: 4px 8px;
+    color: whitesmoke;
+    margin-right: 0.5rem;
+    
+  
+  }
 
 .post a:hover,
 .post a:focus {
-  color: hsla(0, 0%, 0%, 0.75);
+  color: #256377;  
+  background-color: whitesmoke;
 }
 
 .reaction {
@@ -202,6 +223,7 @@ span {
 .delete-button {
   background-color:red;
   color: #256377;
+  border: none;
 }
 
 
