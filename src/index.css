@@ -34,15 +34,9 @@ form button {
   border-radius: 10px;
   color: #256377;
   border: none;
+  cursor: pointer;
   
 }
-
-
-
-
-
-
-
 
 
 input {  
@@ -268,11 +262,21 @@ span {
 
 
 
-.delete-button {
-  background-color:red;
+form .delete-button {
+  background-color:rgb(224, 101, 101);
   color: #256377;
   border: none;
+  cursor: pointer;
+  margin-bottom: 0px;
 }
+
+
+ form .delete-button:hover,
+ form .delete-button:focus {  
+  background-color: rgb(224, 61, 61);
+}
+
+
 
 
 .loader {
@@ -295,6 +299,7 @@ header nav button {
   border: none;
   color: #256377;
   padding: 4px 8px;
+  cursor: pointer;
   
   
   
@@ -307,7 +312,7 @@ header nav button:focus {
   background-color: #256377 ;
   border-radius: 10px;
   padding: 4px 8px;
-  cursor: pointer;
+  
 }
 
 nav button:visited {  
