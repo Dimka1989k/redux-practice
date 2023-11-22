@@ -1,15 +1,16 @@
 import { useSelector } from "react-redux";
+
 import {
-  selectAllPosts,
+  selectPostIds,
   getPostsStatus,
   getPostsError,
-} from "../redux/selectors/selectors";
+} from "../redux/slice/postsSlice";
 import { FidgetSpinner } from "react-loader-spinner";
 
 import PostExcerpt from "./PostExcerpt";
 
 const PostList = () => {
-  const posts = useSelector(selectAllPosts);
+  const orderedPostIds = useSelector(selectPostIds);
   const postsStatus = useSelector(getPostsStatus);
   const error = useSelector(getPostsError);
 
@@ -30,11 +31,8 @@ const PostList = () => {
       </div>
     );
   } else if (postsStatus === "succeeded") {
-    const orderedPosts = posts
-      .slice()
-      .sort((a, b) => b.date.localeCompare(a.date));
-    content = orderedPosts.map((post) => (
-      <PostExcerpt key={post.id} post={post} />
+    content = orderedPostIds.map((postId) => (
+      <PostExcerpt key={postId} postId={postId} />
     ));
   } else if (postsStatus === "failed") {
     content = <p>{error}</p>;

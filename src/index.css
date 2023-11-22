@@ -28,7 +28,7 @@ main {
 
 
 
-button {
+form button {
   font: inherit;
   margin-bottom: 1em;
   border-radius: 10px;
@@ -92,6 +92,7 @@ header {
 nav {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   
   
  
@@ -106,7 +107,13 @@ nav ul li {
   display: inline-block;
   justify-content: center;
   margin-right: 10px;
+  margin-top: 0px;
+  
+  
 }
+
+
+
 
 
 nav ul li:last-child {
@@ -118,7 +125,38 @@ nav a,
 nav a:visited {
   color:#256377;
   padding: 4px 8px;
+  
+ 
+  
+}
+
+
+
+
+li a:focus,
+a:hover {  
+  background-color: whitesmoke ;
+    border-radius: 10px;
+    padding: 4px 8px;
+    color:#256377;
+
+}
+
+li {
+  list-style: none;  
+  margin-top: 10px;
+}
+
+a {
   text-decoration: none;
+  color: whitesmoke;
+  
+}
+
+li:visited {
+  
+  list-style: none;
+  
   
 }
 
@@ -247,4 +285,36 @@ span {
     justify-content: center;
     align-items: center;
     backdrop-filter: invert(25%);
+}
+
+
+header nav button {
+  font: inherit;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  border: none;
+  color: #256377;
+  padding: 4px 8px;
+  
+  
+  
+  
+}
+
+header nav button:hover,
+header nav button:focus {
+  color: whitesmoke;
+  background-color: #256377 ;
+  border-radius: 10px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+nav button:visited {  
+    padding: 4px 8px;
+    color: whitesmoke;
+  
+
+
+
 }

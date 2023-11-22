@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectPostById } from "../redux/selectors/selectors";
+import { selectPostById } from "../redux/slice/postsSlice";
 import { updatePost, deletePost } from "../redux/slice/postsSlice";
 import { useParams, useNavigate } from "react-router-dom";
 
-import { selectAllUsers } from "../redux/selectors/selectors";
+import { selectAllUsers } from "../redux/slice/usersSlice";
 
 const EditPostForm = () => {
   const { postId } = useParams();

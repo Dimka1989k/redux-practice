@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectPostById } from "../redux/selectors/selectors";
+import { selectPostById } from "../redux/slice/postsSlice";
 
 import PostAuthor from "./PostAuthor";
 import TimeAgo from "./TimeAgo";

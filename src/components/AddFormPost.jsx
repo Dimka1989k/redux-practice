@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { selectAllUsers } from "../redux/selectors/selectors";
+import { selectAllUsers } from "../redux/slice/usersSlice";
 
 import { addNewPost } from "../redux/slice/postsSlice.js";
 
